@@ -1,4 +1,8 @@
+module Monologue::PostDecorator
+end
+
 Monologue::Post.class_eval do
+
   before_validation do
     if self.new_record?
       self.is_markdown = true
